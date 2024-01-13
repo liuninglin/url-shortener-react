@@ -3,7 +3,6 @@ import { listAllShortUrls } from "../services/ShortUrlService";
 import UpdateLocalStorageService from "../services/UpdateLocalStorageService";
 
 export function useShortUrlData({ initialData }) {
-  // fc is the key used to identify the cached flexCal data
   const { data } = useSWR(
     "fc",
     () =>

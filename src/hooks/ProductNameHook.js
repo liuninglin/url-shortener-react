@@ -3,7 +3,6 @@ import { listAllProductNames } from "../services/ProductNameService";
 import UpdateLocalStorageService from "../services/UpdateLocalStorageService";
 
 export function useProductNameData({ initialData }) {
-  // fc is the key used to identify the cached flexCal data
   const { data } = useSWR(
     "fc",
     () =>

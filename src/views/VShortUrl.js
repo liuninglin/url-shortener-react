@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useShortUrlData } from "../hooks/ShortUrlHook";
-import { deleteShortUrl, postShortUrls } from "../services/ShortUrlService";
 import Container from 'react-bootstrap/Container';
 import CLoading from "../components/common/CLoading";
 import CShortUrlCard from"../components/common/CShortUrlCard";
@@ -17,9 +16,6 @@ const VShortUrls = () => {
   useEffect(() => {
     setShortUrls(shortUrls);
   }, [shortUrls]);
-
-  // deleteShortUrl();
-  postShortUrls();
 
   return currShortUrls === undefined || currShortUrls === null ? (
     <CLoading />
@@ -43,7 +39,6 @@ const VShortUrls = () => {
 
     <br/>
     <br/>
-
       {
         currShortUrls.map((each, index) => {
           console.log(each);

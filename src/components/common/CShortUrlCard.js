@@ -1,23 +1,13 @@
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import { Button, Form } from 'react-bootstrap';
-import { FiCopy } from 'react-icons/fi';
-import { MdAdd, MdOpenInNew, MdRemove } from 'react-icons/md';
-import { useState } from 'react';
+import { Button } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { REQUEST_PATH_SHORTLINK } from '../../constants/Variables';
 import { URL_SHORTENER_API_HOST_DEV } from '../../constants/URLs';
 import { deleteShortUrl } from "../../services/ShortUrlService";
 
-/**
- * FlexCal card Component which represents a flexcal.
- * Including information like titles, descriptions, invitation link.
- * This component also allows for adding attendess to customize invitation link. 
- * @param {*} props expected fields: edit URL, start date, name
- */
 const CShortUrlCard = (shortUrl) => {
-
   return (
    <Row className="justify-content-md-center">
     <Col xs lg="8">

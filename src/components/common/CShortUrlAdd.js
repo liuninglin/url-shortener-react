@@ -85,16 +85,12 @@ const CShortUrlAdd = () => {
     }
 
 
-   
-
-
     for (let i = 0; i < extraLanguagePartItems.length; i++) {
         if (extraLanguagePartItems[i].languageAndCountryCode === '' || extraLanguagePartItems[i].originalURL === '') {
             alert('Please input language code and original URL');
         return;
         }
     }
-
 
     let tempData = {[languageAndCountryCode]: originalURL};
     for (let i = 0; i < extraLanguagePartItems.length; i++) {
@@ -116,9 +112,6 @@ const CShortUrlAdd = () => {
         window.location.reload(); 
     }
     );
-
-    
-    
   }
 
   
